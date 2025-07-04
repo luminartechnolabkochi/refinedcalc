@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume/CV Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 2px solid #333;
+            padding: 40px;
+        }
+        
+        .wireframe-box {
+            border: 1px solid #666;
+            padding: 15px;
+            margin: 15px 0;
+            background: #f9f9f9;
+            position: relative;
+        }
+        
+        .wireframe-label {
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: white;
+            padding: 0 5px;
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .header {
+            text-align: center;
+            border: 2px solid #333;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            padding: 5px 10px;
+            border: 1px solid #999;
+            background: #eee;
+            font-size: 14px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .section-title {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .content-placeholder {
+            height: 60px;
+            background: #e0e0e0;
+            border: 1px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        
+        .content-placeholder.tall {
+            height: 100px;
+        }
+        
+        .content-placeholder.short {
+            height: 40px;
+        }
+        
+        .skill-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .skill-bar {
+            height: 20px;
+            background: #ddd;
+            border: 1px solid #999;
+            position: relative;
+        }
+        
+        .skill-fill {
+            height: 100%;
+            background: #666;
+        }
+        
+        .skill-fill.high { width: 90%; }
+        .skill-fill.medium { width: 70%; }
+        .skill-fill.low { width: 50%; }
+        
+        .experience-item {
+            border-left: 3px solid #333;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .company-date {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>[FULL NAME]</h1>
+            <div class="contact-info">
+                <div class="contact-item">📧 Email</div>
+                <div class="contact-item">📱 Phone</div>
+                <div class="contact-item">🌐 LinkedIn</div>
+                <div class="contact-item">📍 Location</div>
+            </div>
+        </div>
+        
+        <!-- Professional Summary -->
+        <div class="section-title">Professional Summary</div>
+        <div class="content-placeholder">
+            2-3 lines describing professional background and key strengths
+        </div>
+        
+        <!-- Two Column Layout -->
+        <div class="two-column">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Experience -->
+                <div class="section-title">Experience</div>
+                <div class="experience-item">
+                    <div class="job-title">[JOB TITLE]</div>
+                    <div class="company-date">[COMPANY NAME] | [DATES]</div>
+                    <div class="content-placeholder short">Key responsibilities and achievements</div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">[JOB TITLE]</div>
+                    <div class="company-date">[COMPANY NAME] | [DATES]</div>
+                    <div class="content-placeholder short">Key responsibilities and achievements</div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">[JOB TITLE]</div>
+                    <div class="company-date">[COMPANY NAME] | [DATES]</div>
+                    <div class="content-placeholder short">Key responsibilities and achievements</div>
+                </div>
+                
+                <!-- Education -->
+                <div class="section-title">Education</div>
+                <div class="wireframe-box">
+                    <div class="wireframe-label">DEGREE</div>
+                    <div style="font-weight: bold;">[DEGREE NAME]</div>
+                    <div style="color: #666;">[UNIVERSITY NAME] | [YEAR]</div>
+                </div>
+                <div class="wireframe-box">
+                    <div class="wireframe-label">CERTIFICATION</div>
+                    <div style="font-weight: bold;">[CERTIFICATION NAME]</div>
+                    <div style="color: #666;">[ISSUING BODY] | [YEAR]</div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Skills -->
+                <div class="section-title">Skills</div>
+                <div class="skill-bars">
+                    <div style="margin-bottom: 5px; font-size: 14px;">Technical Skills</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill high"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill medium"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill high"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill low"></div>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div class="section-title">Languages</div>
+                <div class="wireframe-box">
+                    <div class="wireframe-label">LANGUAGE</div>
+                    <div>English - Native</div>
+                    <div>Spanish - Fluent</div>
+                    <div>French - Intermediate</div>
+                </div>
+                
+                <!-- Projects -->
+                <div class="section-title">Projects</div>
+                <div class="wireframe-box">
+                    <div class="wireframe-label">PROJECT 1</div>
+                    <div style="font-weight: bold;">[PROJECT NAME]</div>
+                    <div class="content-placeholder short">Brief description and technologies used</div>
+                </div>
+                <div class="wireframe-box">
+                    <div class="wireframe-label">PROJECT 2</div>
+                    <div style="font-weight: bold;">[PROJECT NAME]</div>
+                    <div class="content-placeholder short">Brief description and technologies used</div>
+                </div>
+                
+                <!-- Interests -->
+                <div class="section-title">Interests</div>
+                <div class="content-placeholder short">
+                    Hobbies, volunteer work, personal interests
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

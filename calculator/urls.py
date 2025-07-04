@@ -21,5 +21,12 @@ from mathoperations import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("add/",views.AdditionView.as_view())
+    path("operations/arithmetic/add/",views.AdditionView.as_view(),name="add"),
+
+    path("sub/",views.SubtractionView.as_view(),name="sub"),
+
+    path("",views.IndexView.as_view(),name="index"),
+
+    path("calorie/",views.CalorieView.as_view(),name="calorie")
+
 ]
